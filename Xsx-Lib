@@ -1111,7 +1111,6 @@ function library:Init(key)
         CreateTween("hover", 0.16)
         local Components = {}
         function Components:NewLabel(text, alignment)
-            local refresh = {}
             text = text or "label"
             alignment = alignment or "left"
 
@@ -1183,10 +1182,6 @@ function library:Init(key)
                     label.TextXAlignment = Enum.TextXAlignment.Right
                 end
             end
-                function refresh:Refresh(label)
-                    label.Text = label
-                    return refresh
-                end
             return LabelFunctions
         end
 
